@@ -1,0 +1,155 @@
+
+/* Animaciones para imagenes y títulos*/
+
+@keyframes colores{
+	
+	0% {filter: hue-rotate(72deg);}
+	25%{filter: hue-rotate(144deg);}
+	50%{filter: hue-rotate(216deg);}
+	75%{filter: hue-rotate(288deg);}
+	100%{filter: hue-rotate(360deg);}
+}
+@keyframes coloresTexto{
+	0% {color: rgb(240,0,0);text-shadow: 1px 1px 2px black; text-shadow: 0px 0px 5px rgb(126,0,0), 0px 0px 10px rgba(255,0,0,0)}
+	25%{color: rgb(0,0,255);text-shadow: 1px 1px 2px black;text-shadow: 0px 0px 5px rgb(0,0,255), 0px 0px 10px rgba(255,0,0,1)}
+	50%{color: rgb(0,255,0);text-shadow: 1px 1px 2px black;text-shadow: 0px 0px 5px rgb(0,255,0),0px 0px 10px rgba(255,0,0,0)}
+	75%{color: rgb(0,255,255);text-shadow: 1px 1px 2px black;text-shadow: 0px 0px 5px rgb(0,255,255),0px 0px 10px rgba(255,0,0,1)}
+	100%{color: rgb(255,0,0);text-shadow: 1px 1px 2px black;text-shadow: 0px 0px 5px rgb(126,0,0),0px 0px 10px rgba(255,0,0,0)}
+}
+
+
+/* Estilos para el título */
+span{
+
+	
+	animation-name: coloresTexto;
+	animation-duration: 10s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+
+}
+
+img{	
+	animation-name: colores;
+	animation-duration: 25s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	height:100px;	
+}
+
+h1 {
+	margin:auto;	
+	text-align: center;
+	font-size: 100px;
+	font-family: 'Bangers',cursive;
+
+
+}
+
+/* Estilos para la navegación*/
+.cabecera{
+	padding:10px;
+
+
+}
+nav  ul{	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	
+	text-align: center;
+}
+nav ul li{
+	display: inline;
+	margin-right: 15px;
+	font-family: 'Caveat',cursive;
+	font-size: 24px;
+}
+nav ul li:hover{
+	color: #FF1493;
+}
+/*Estilos para el body*/
+body{
+	background-color: #F0F8FF;
+	margin: 0;
+	padding: 0;
+}
+/* Estilos para el contenido o Main*/
+.main{
+	margin:auto;
+	margin-top: 25px;
+	display: flex;
+  	justify-content: space-around;
+  	flex-wrap: wrap;
+  	transition: all 1s;
+  	
+}
+.art_main{
+	margin: 15px;
+	background-color: #FF1493;
+	width: 250px;
+	min-height: 250px;
+	overflow: hidden;
+	border: 10px solid transparent;
+	border-top-left-radius: 75px ;
+	border-bottom-right-radius: 62px;
+  	padding: 25px;
+ 	border-image: url(hoja.svg) round;
+ 	border-image-slice: 33%;
+ 	border-image-width: 50px; 
+ 	transform: rotate(3deg);
+ 	box-shadow: 4px 4px 4px grey;
+ 	transition: all 1s;
+ 	align-self: center;
+ 	visibility: visible;
+ 	opacity: 1;
+ 	
+
+}
+
+/* Enderezamos las tarjetas */
+.art_main:hover{
+	transform: rotate(0deg);	
+
+}
+
+/* Variedad de colores, tamaños y posición de los pos-it*/
+
+div div:nth-of-type(odd) {
+  background-color: #ccff00;
+  transform: rotate(0deg);
+}
+div div:nth-of-type(3n) {
+  transform: rotate(-2deg);
+}
+
+div div:nth-of-type(3n+1) {
+  flex-grow: 2;
+}
+
+div div:nth-of-type(3n+2) {
+  background-color: #15f4ee;
+}
+
+/* hack del checkbox para funcionar sin JS: hará crecer la tarjeta y difuminará el resto; */
+input{
+	display: none;
+}
+.escondido{
+	opacity: 0;
+	display:none;
+	
+	
+}
+.desplegado{
+	
+	opacity: 1;
+	
+	order:-100;	
+	background-color: rgba(255,20,147,0.2) !important;
+	z-index: 1;	
+	width: 100%;
+	height: 100%;
+	transform: rotate(0deg) !important;
+}
+/* fin del hack -por si lo monto con js-*/
