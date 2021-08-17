@@ -2,7 +2,7 @@
 /* Animaciones para imagenes y títulos*/
 
 @keyframes colores{
-	
+
 	0% {filter: hue-rotate(72deg);}
 	25%{filter: hue-rotate(144deg);}
 	50%{filter: hue-rotate(216deg);}
@@ -21,7 +21,7 @@
 /* Estilos para el título */
 span{
 
-	
+
 	animation-name: coloresTexto;
 	animation-duration: 10s;
 	animation-direction: alternate;
@@ -29,16 +29,16 @@ span{
 
 }
 
-img{	
+img{
 	animation-name: colores;
 	animation-duration: 25s;
 	animation-direction: alternate;
 	animation-iteration-count: infinite;
-	height:100px;	
+	height:100px;
 }
 
 h1 {
-	margin:auto;	
+	margin:auto;
 	text-align: center;
 	font-size: 100px;
 	font-family: 'Bangers',cursive;
@@ -52,11 +52,11 @@ h1 {
 
 
 }
-nav  ul{	
+nav  ul{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	
+
 	text-align: center;
 }
 nav ul li{
@@ -82,7 +82,7 @@ body{
   	justify-content: space-around;
   	flex-wrap: wrap;
   	transition: all 1s;
-  	
+
 }
 .art_main{
 	margin: 15px;
@@ -93,23 +93,23 @@ body{
 	border: 10px solid transparent;
 	border-top-left-radius: 75px ;
 	border-bottom-right-radius: 62px;
-  	padding: 25px;
+  padding: 25px;
  	border-image: url(hoja.svg) round;
  	border-image-slice: 33%;
- 	border-image-width: 50px; 
+ 	border-image-width: 50px;
  	transform: rotate(3deg);
  	box-shadow: 4px 4px 4px grey;
  	transition: all 1s;
  	align-self: center;
  	visibility: visible;
  	opacity: 1;
- 	
+
 
 }
 
 /* Enderezamos las tarjetas */
 .art_main:hover{
-	transform: rotate(0deg);	
+	transform: rotate(0deg);
 
 }
 
@@ -138,16 +138,16 @@ input{
 .escondido{
 	opacity: 0;
 	display:none;
-	
-	
+
+
 }
 .desplegado{
-	
+
 	opacity: 1;
-	
-	order:-100;	
+
+	order:-100;
 	background-color: rgba(255,20,147,0.2) !important;
-	z-index: 1;	
+	z-index: 1;
 	width: 100%;
 	height: 100%;
 	transform: rotate(0deg) !important;
