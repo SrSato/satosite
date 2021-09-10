@@ -1,57 +1,88 @@
 :root{
-  --bg-color:#ff4e25; /*Rojo carnoso*/
-  --bg-card-1:#fee000; /*amarillo*/
-  --bg-card-2:#30afef; /*azul*/
-  --bg-card-3:#ec648d; /*rosa*/
-  --bg-card-4:#9e008c; /*morado */
-  --bg-card-5:#39d850; /*verde*/
-  --bg-card-6:#ff4e25; /*Rojo carnoso*/
-  --bg-card-7:#ff14ce;
-  --bg-card-8:#ccff00; /*amarillo fluorescente*/
-  --bg-card-9:#15f4ee;
-  --bg-card-10:#1eff14;
+  --bg-color:grey;
+  --bg-card-yellow:#fee000; /*amarillo*/
+  --bg-card-blue:#30afef; /*azul*/
+  --bg-card-pink:#ec648d; /*rosa*/
+  --bg-card-purple:#9e008c; /*morado */
+  --bg-card-green:#39d850; /*verde*/
+  --bg-card-red:#ff4e25; /*Rojo carnoso*/
+  --bg-card-fluorpink:#ff14ce;
+  --bg-card-fluoryellow:#ccff00; /*amarillo fluorescente*/
+  --bg-card-fluorblue:#15f4ee;
+  --bg-card-fluorgreen:#1eff14;
 
 }
 
 body{
-  background-color: white;
+  background-color: var(--bg-color);
 }
 
+h1{
+      font-family: 'Bungee Shade', cursive;
+      font-size: 5rem;
+      text-align: center;
+}
 .article{
-  border: 1px,solid,black;
+  position: relative;
+  margin:60px;
   width: 300px;
   height: 300px;
 
   display: inline-block;
 }
 
-.color_1{
-  background-color: var(--bg-card-1);
+.fluorpink{
+  background-color: var(--bg-card-fluorpink);
 }
-.color_2{
-  background-color: var(--bg-card-2);
+.fluorblue{
+  background-color: var(--bg-card-fluorblue);
 }
-.color_3{
-  background-color: var(--bg-card-3);
+.fluorgreen{
+  background-color: var(--bg-card-fluorgreen);
 }
-.color_4{
-  background-color: var(--bg-card-4);
+.fluoryellow{
+  background-color: var(--bg-card-fluoryellow);
 }
-.color_5{
-  background-color: var(--bg-card-5);
+
+
+/*------------- FX: Article Blur + border gradient ------------------------------------------------------------------------*/
+/*------------- Article Blur----------------------------------------------------------------------------------------------*/
+.article::before{
+  content:"";
+  position: absolute;
+  top:-2px;
+  left:-2px;
+  right:-2px;
+  bottom: -2px;
+  background-color: #ffffff;
+  z-index:-1;
 }
-.color_6{
-  background-color: var(--bg-card-6);
+.article::after{
+  content:"";
+  position: absolute;
+  top:-2px;
+  left:-2px;
+  right:-2px;
+  bottom: -2px;
+  background-color: #ffffff;
+  z-index:-1;
+  filter:blur(40px);
 }
-.color_7{
-  background-color: var(--bg-card-7);
+/*------------ Border Grdient ------------------------------------------------------------------------------------------*/
+.fluorpink::before,
+.fluorpink::after{
+  background: linear-gradient(235deg,var(--bg-card-fluorgreen),var(--bg-color),var(--bg-card-fluorblue));
 }
-.color_8{
-  background-color: var(--bg-card-8);
+
+.fluorblue::before,
+.fluorblue::after{
+  background: linear-gradient(235deg,var(--bg-card-fluoryellow),var(--bg-color),var(--bg-card-fluorpink));
 }
-.color_9{
-  background-color: var(--bg-card-9);
+
+.fluorgreen::before,
+.fluorgreen::after,
+.fluoryellow::before,
+.fluoryellow::after{
+  background: linear-gradient(235deg,var(--bg-card-fluorpink),var(--bg-color),var(--bg-card-fluorblue));
 }
-.color_10{
-  background-color: var(--bg-card-10);
-}
+/* -------------------------------------------------FX END------------------------------------------------------------*/
