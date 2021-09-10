@@ -1,0 +1,40 @@
+:root{
+  --bg-color:#ff4e25; /*Rojo carnoso*/
+  --bg-card-1:#fee000; /*amarillo fosfi*/
+  --bg-card-2:#30afef; /*azul fosfi*/
+  --bg-card-3:#ec648d; /*rosa fosfi*/
+  --bg-card-4:#9e008c; /*morado fosfi */
+  --bg-card-5:#39d850; /*verde fosfi*/
+  --bg-card-6:#ff4e25; /*Rojo carnoso*/
+}
+
+body{
+  background-color: black;
+}
+
+.article{
+  border: 1px,solid,black;
+  width: 300px;
+  height: 300px;
+
+  display: inline-block;
+}
+
+.color_1{
+  background-color: var(--bg-card-1);
+}
+.color_2{
+  background-color: var(--bg-card-2);
+}
+.color_3{
+  background-color: var(--bg-card-3);
+}
+.color_4{
+  background-color: var(--bg-card-4);
+}
+.color_5{
+  background-color: var(--bg-card-5);
+}
+.color_6{
+  background-color: var(--bg-card-6);
+}
