@@ -1,15 +1,20 @@
 :root{
   --bg-color:#ff4e25; /*Rojo carnoso*/
-  --bg-card-1:#fee000; /*amarillo fosfi*/
-  --bg-card-2:#30afef; /*azul fosfi*/
-  --bg-card-3:#ec648d; /*rosa fosfi*/
-  --bg-card-4:#9e008c; /*morado fosfi */
-  --bg-card-5:#39d850; /*verde fosfi*/
+  --bg-card-1:#fee000; /*amarillo*/
+  --bg-card-2:#30afef; /*azul*/
+  --bg-card-3:#ec648d; /*rosa*/
+  --bg-card-4:#9e008c; /*morado */
+  --bg-card-5:#39d850; /*verde*/
   --bg-card-6:#ff4e25; /*Rojo carnoso*/
+  --bg-card-7:#ff14ce;
+  --bg-card-8:#ccff00; /*amarillo fluorescente*/
+  --bg-card-9:#15f4ee;
+  --bg-card-10:#1eff14;
+
 }
 
 body{
-  background-color: black;
+  background-color: white;
 }
 
 .article{
@@ -37,4 +42,16 @@ body{
 }
 .color_6{
   background-color: var(--bg-card-6);
+}
+.color_7{
+  background-color: var(--bg-card-7);
+}
+.color_8{
+  background-color: var(--bg-card-8);
+}
+.color_9{
+  background-color: var(--bg-card-9);
+}
+.color_10{
+  background-color: var(--bg-card-10);
 }
