@@ -1,0 +1,14 @@
+ # ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named ca
+ca/
+
+# ignore ALL files in node_modules directory
+node_modules
+
+# ignore ALL files in config directory
+config
+
+# ignore package-lock.json
+package-lock.json
