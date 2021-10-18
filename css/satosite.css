@@ -58,19 +58,31 @@ h1{
 }
 
 .box-photo{
-  height: 30%;
+  max-height: 75%;
+  height: 75%;
   width: 100%;
   background-color:inherit;
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.ZSckDC-sDyre7pD0hy8udwHaEk%26pid%3DApi&f=1");
-  background-size: 120%;
+  background-size: 150%;
   background-position: -10px;
   background-blend-mode:luminosity;
-  transition: background-size 0.2s linear;
+  transition: all 0.2s linear;
 }
 
-.box-photo:hover{
-  background-size: 150%;
+.article:hover .box-photo{
+  background-size: 120%;
+  max-height: 30%;
 }
+
+.article:hover .box-text{
+  max-height: 70%;
+  overflow:hidden;
+}
+
+.article:hover .box-text p{
+  visibility: visible;
+}
+
 
 .fluorpink .box-photo {
   box-shadow: 0px 0px 10px 0 var(--bg-card-fluorpink) inset, 0px -10px 10px 0 var(--bg-card-fluorpink) inset;
@@ -88,9 +100,18 @@ h1{
   box-shadow: 0px 0px 10px 0 var(--bg-card-fluoryellow) inset, 0px -10px 10px 0 var(--bg-card-fluoryellow) inset;
 }
 
+.box-text{
+  overflow: hidden;
+  max-height: 25%;
+  transition: all 0.2s linear;
+
+}
+
 .box-text p{
   margin-left: 20px;
   margin-right: 20px;
+  visibility: hidden;
+  transition-delay: 0.1s;
 }
 
 .article h1,h2,h3,h4,h5,h6{
