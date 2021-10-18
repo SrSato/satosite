@@ -1,3 +1,4 @@
+const srvConfig = require('./config/serverConfig');
 const express = require('express');
 const http = require('http');
 const https = require('https');
@@ -10,9 +11,9 @@ const httpsOptions = {
 
 const app=require('./app');
 
-http.createServer(app).listen(8888,function(){
-  console.log("Http Server up and listening at ...")
+http.createServer(app).listen(srvConfig.HTTP_PORT,function(){
+  console.log(`Http Server up and listening at port ${srvConfig.HTTP_PORT}`)
 });
-https.createServer(httpsOptions, app).listen(4433,function(){
-  console.log("Https Server up and listening at ...")
+https.createServer(httpsOptions, app).listen(srvConfig.HTTPS_PORT,function(){
+  console.log(`Https Server up and listening at port ${srvConfig.HTTPS_PORT}`)
 });
